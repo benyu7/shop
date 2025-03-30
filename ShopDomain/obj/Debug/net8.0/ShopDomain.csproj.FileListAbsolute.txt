@@ -1,0 +1,11 @@
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.AssemblyInfoInputs.cache
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.AssemblyInfo.cs
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.csproj.CoreCompileInputs.cache
+C:\Users\Ben\RiderProjects\shop\ShopDomain\bin\Debug\net8.0\ShopDomain.deps.json
+C:\Users\Ben\RiderProjects\shop\ShopDomain\bin\Debug\net8.0\ShopDomain.dll
+C:\Users\Ben\RiderProjects\shop\ShopDomain\bin\Debug\net8.0\ShopDomain.pdb
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.dll
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\refint\ShopDomain.dll
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ShopDomain.pdb
+C:\Users\Ben\RiderProjects\shop\ShopDomain\obj\Debug\net8.0\ref\ShopDomain.dll
