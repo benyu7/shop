@@ -1,22 +1,20 @@
-using System.Security.Cryptography;
-
 namespace ShopDomain;
 
 public class Price
 {
-    private int dollars;
-    private int cents;
+    private readonly int _dollars;
+    private readonly int _cents;
     
     public Price(decimal amount)
     {
-        dollars = (int)amount;
-        cents = (int)((amount - dollars) * 100);
+        _dollars = (int)amount;
+        _cents = (int)((amount - _dollars) * 100);
     }
 
     public Price(int dollars, int cents)
     {
-        this.dollars = dollars; 
-        this.cents = cents;
+        _dollars = dollars; 
+        _cents = cents;
     }
 
     public static Price operator +(Price a, Price b)
@@ -27,6 +25,6 @@ public class Price
     
     public decimal GetValue()
     {
-        return dollars + (decimal)cents / 100;
+        return _dollars + (decimal)_cents / 100;
     }
 }

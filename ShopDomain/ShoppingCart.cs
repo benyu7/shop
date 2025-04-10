@@ -1,15 +1,17 @@
 namespace ShopDomain;
 
-public class ShoppingCart
+public class ShoppingCart(User user)
 {
-    private List<Product> products = new();
+    public User User { get; init; } = user;
+    public List<Product> Products { get; init; } = new List<Product>();
+
     public void AddToCart(Product product)
     {
-        products.Add(product);
+        Products.Add(product);
     }
 
     public Price GetTotalPrice()
     {
-        return products.Aggregate(new Price(0), (acc, p) => acc + p.GetPrice());
+        return Products.Aggregate(new Price(0), (acc, p) => acc + p.GetPrice());
     }
 }
