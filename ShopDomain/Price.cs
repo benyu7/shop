@@ -1,30 +1,19 @@
 namespace ShopDomain;
 
-public class Price
+public readonly record struct Price(int Dollars, int Cents)
 {
-    private readonly int _dollars;
-    private readonly int _cents;
-    
     public Price(decimal amount)
-    {
-        _dollars = (int)amount;
-        _cents = (int)((amount - _dollars) * 100);
-    }
+        : this((int)amount, (int)((amount - (int)amount) * 100)) { }
 
-    public Price(int dollars, int cents)
-    {
-        _dollars = dollars; 
-        _cents = cents;
-    }
+    public decimal GetValue() => Dollars + (decimal)Cents / 100;
 
     public static Price operator +(Price a, Price b)
     {
-        decimal amount = a.GetValue() + b.GetValue();
-        return new Price(amount);
-    }
-    
-    public decimal GetValue()
-    {
-        return _dollars + (decimal)_cents / 100;
+        var totalCents = a.Cents + b.Cents;
+        var extraDollars = totalCents / 100;
+        var cents = totalCents % 100;
+        var dollars = a.Dollars + b.Dollars + extraDollars;
+
+        return new Price(dollars, cents);
     }
 }

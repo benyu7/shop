@@ -1,8 +1,8 @@
 namespace ShopDomain;
 
-public class User
+public record User
 {
-    private string name;
-    private string email;
-    private BonusPoint bonus;
+    public BonusPoint Bonus { get; set; } = new(0);
+    public string Email { get; init; }
+    public string Name { get; init; }
 }

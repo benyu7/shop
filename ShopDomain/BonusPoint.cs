@@ -1,23 +1,15 @@
 namespace ShopDomain;
 
-public class BonusPoint
+public readonly record struct BonusPoint(int Value)
 {
-    private int _value;
-
-    public BonusPoint(int value)
+    public static BonusPoint operator +(BonusPoint p1, BonusPoint p2)
     {
-        _value = value;
-    }
-
-    public static BonusPoint operator+(BonusPoint p1, BonusPoint p2)
-    {
-        int value = p1.GetValue() + p2.GetValue();
-        BonusPoint result = new BonusPoint(value);
-        return result;
+        var value = p1.GetValue() + p2.GetValue();
+        return new BonusPoint(value);
     }
 
     public int GetValue()
     {
-        return _value;
+        return Value;
     }
 }
